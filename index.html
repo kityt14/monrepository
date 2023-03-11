@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <p style="margin-bottom: 2rem;" _msttexthash="9929010" _msthash="17">Ce générateur fait des codes loto random</p>
+    
+
+
+    <title>Lottery code + etoile</title>
+    <script>
+      function generateCode() {
+        var numbers = [];
+        while (numbers.length < 1) {
+          var randomNumber = Math.floor(Math.random() * 12)
+          if (numbers.indexOf(randomNumber) === -1) {
+            numbers.push(randomNumber);
+          }
+        }
+        document.getElementById("output").innerHTML = "votre code: " + numbers.join(", ");
+      }
+      
+      
+        
+      
+      
+      function  generateNumbers() {
+        var numbers = [];
+        while (numbers.length < 7) {
+          var randomNumber = Math.floor(Math.random() * 50) + 1; 
+          if (numbers.indexOf(randomNumber) === -1) {
+            numbers.push(randomNumber);
+          }
+        }
+        document.getElementById("output").innerHTML = "votre code: " + numbers.join(", ");
+      }
+    </script>
+
+<style>
+  .background {
+    background-color: #ff0000;
+    border-radius: 0%;
+    width: 700px;
+    height: 550px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFFFFF;
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+  }
+</style>
+  </head>
+  <body>
+    <h1>Lottery code + etoile</h1>
+    <button onclick="generateNumbers()">Generate code</buttons>
+    <button onclick="generateCode()">Generate etoile</button>
+
+   
+    <p id="output"></p>
+    <div class="background">mon generater de Code loto
+      BY:kityt
+    </div>
+  </body>
+</html>
